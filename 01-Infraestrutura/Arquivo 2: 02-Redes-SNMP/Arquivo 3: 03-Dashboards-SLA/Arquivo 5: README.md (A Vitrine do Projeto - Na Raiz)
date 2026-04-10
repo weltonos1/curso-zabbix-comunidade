@@ -1,0 +1,12 @@
+# 🚀 Portal Open Observability - Curso Sênior
+
+Este repositório contém todo o material técnico para formar especialistas em Zabbix 7.0 e Grafana.
+
+## 🧭 Navegação Rápida
+- [Módulo 1: Infraestrutura](./01-Infraestrutura)
+- [Módulo 2: Redes e SNMP](./02-Redes-SNMP)
+- [Módulo 3: Dashboards e SLA](./03-Dashboards-SLA)
+- [🏆 Laboratório Final](./LAB_FINAL.md)
+
+---
+*Este material é mantido pela comunidade para fortalecer os profissionais de infraestrutura de TI.*
