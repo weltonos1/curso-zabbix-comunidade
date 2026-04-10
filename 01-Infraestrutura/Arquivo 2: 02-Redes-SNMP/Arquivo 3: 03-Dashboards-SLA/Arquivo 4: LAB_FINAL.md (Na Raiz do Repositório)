@@ -1,0 +1,11 @@
+# 🏆 Desafio Final: Operação Observabilidade Sênior
+
+**Cenário:** Você deve monitorar um provedor com 1.000 clientes. O banco de dados está crescendo 10GB por dia e os alertas estão chegando com 5 minutos de atraso.
+
+### 📋 Suas Tarefas:
+1. **Tuning:** Ajuste o `zabbix_server.conf` (Pollers e Cache).
+2. **Performance:** Ative a compressão do TimescaleDB e comprove a redução de I/O.
+3. **Rede:** Configure um monitoramento SNMP v3 que descubra portas automaticamente.
+4. **Visibilidade:** Entregue um Dashboard no Grafana que mude os dados conforme o cliente selecionado.
+
+**Entrega:** Envie o arquivo JSON do seu Dashboard e um print do seu `top` no Linux mostrando o uso de CPU do Zabbix.
