@@ -1,0 +1,35 @@
+systemctl restart zabbix-server zabbix-agent apache2
+systemctl enable zabbix-server zabbix-agent apache2
+
+Acesse: http://seu_ip/zabbix (Login padrão: Admin / Senha: zabbix)
+
+---
+
+### 📄 Arquivo: `03-Dashboards-SLA/03_Alertas_Telegram_Bot.md`
+
+```markdown
+# 🤖 Automação de Alertas via Telegram Bot
+
+Receber alertas no celular é o requisito básico de qualquer NOC moderno.
+
+## 1. Criar o Bot no Telegram
+1. Procure pelo usuário `@BotFather` no Telegram.
+2. Envie o comando `/newbot`.
+3. Escolha o nome (ex: `Zabbix_Welton_Bot`).
+4. **Guarde o API TOKEN** gerado.
+
+## 2. Descobrir seu ChatID
+Envie qualquer mensagem para o seu novo bot e acesse:
+`https://api.telegram.org/bot<SEU_TOKEN_AQUI>/getUpdates`
+Procure pelo número no campo `"id":`.
+
+## 3. Configurar no Zabbix 7.0
+1. Vá em **Alerts -> Media Types**.
+2. Procure por **Telegram**.
+3. Insira o seu Token no parâmetro `Token`.
+4. Em **Users -> Admin -> Media**, adicione o tipo Telegram e cole o seu `ChatID`.
+
+## 4. Teste de Fogo
+Crie uma Trigger de teste ou pare o serviço do Agente em um host:
+`systemctl stop zabbix-agent`
+Se tudo estiver correto, você receberá a notificação instantânea no celular! 📱
