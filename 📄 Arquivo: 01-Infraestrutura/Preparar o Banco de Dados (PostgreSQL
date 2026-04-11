@@ -1,0 +1,6 @@
+# Criar o usuário e o banco de dados
+sudo -u postgres createuser --pwprompt zabbix
+sudo -u postgres createdb -O zabbix zabbix
+
+# Importar o esquema inicial (Atenção: este processo pode demorar alguns minutos)
+zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psql zabbix
