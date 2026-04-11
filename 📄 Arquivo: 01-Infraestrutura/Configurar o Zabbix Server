@@ -1,0 +1,4 @@
+Edite o arquivo /etc/zabbix/zabbix_server.conf e ajuste a senha do banco:
+
+Ini, TOML
+DBPassword=SUA_SENHA_AQUI
